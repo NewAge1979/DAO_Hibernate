@@ -1,0 +1,16 @@
+server:
+  port: 8888
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/Netology
+    username: khrapatiymv
+    password: r0t4@dm1n
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: none
+    defer-datasource-initialization: true
+  sql:
+    init:
+      mode: always
