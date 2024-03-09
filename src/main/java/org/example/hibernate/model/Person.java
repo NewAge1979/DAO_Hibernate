@@ -1,17 +1,13 @@
 package org.example.hibernate.model;
 
-import jakarta.persistence.EmbeddedId;
-import jakarta.persistence.Entity;
-import jakarta.persistence.NamedNativeQuery;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.*;
 import org.hibernate.proxy.HibernateProxy;
 
 import java.util.Objects;
 
 @Entity
-@Table(name = "public.Persons")
-@NamedNativeQuery(name = "getPersByCity", query = "Select * From public.Persons Where city_of_living = :city")
+@Table(name = "Persons")
 @NoArgsConstructor
 @Getter
 @Setter
@@ -19,8 +15,10 @@ import java.util.Objects;
 public class Person {
     @EmbeddedId
     private PersonKey id;
-    private String phone_number;
-    private String city_of_living;
+    @Column(name = "phone_number")
+    private String phone;
+    @Column(name = "city_of_living")
+    private String city;
 
     @Override
     public final boolean equals(Object o) {

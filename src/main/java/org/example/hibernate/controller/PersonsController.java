@@ -20,4 +20,14 @@ public class PersonsController {
     public List<Person> getPersonsByCity(@RequestParam String city) {
         return personsService.getPersonsByCity(city);
     }
+
+    @GetMapping("/by-age")
+    public List<Person> getPersonsByAge(@RequestParam Integer age) {
+        return personsService.getPersonsByAge(age);
+    }
+
+    @GetMapping("/by-name-surname")
+    public List<Person> getPersonsByNameAndSurname(@RequestParam String name, @RequestParam String surname) {
+        return personsService.getPersonsByNameAndSurname(name, surname);
+    }
 }
