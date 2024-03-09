@@ -3,12 +3,14 @@ package org.example.hibernate.model;
 import jakarta.persistence.EmbeddedId;
 import jakarta.persistence.Entity;
 import jakarta.persistence.NamedNativeQuery;
+import jakarta.persistence.Table;
 import lombok.*;
 import org.hibernate.proxy.HibernateProxy;
 
 import java.util.Objects;
 
-@Entity(name = "public.Persons")
+@Entity
+@Table(name = "public.Persons")
 @NamedNativeQuery(name = "getPersByCity", query = "Select * From public.Persons Where city_of_living = :city")
 @NoArgsConstructor
 @Getter
