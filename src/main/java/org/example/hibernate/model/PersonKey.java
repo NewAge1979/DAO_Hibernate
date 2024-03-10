@@ -1,5 +1,6 @@
 package org.example.hibernate.model;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Embeddable;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -10,7 +11,10 @@ import java.io.Serializable;
 @NoArgsConstructor
 @Data
 public class PersonKey implements Serializable {
+    @Column(name = "name")
     private String name;
+    @Column(name = "surname")
     private String surname;
-    private int age;
+    @Column(name = "age")
+    private Integer age;
 }
