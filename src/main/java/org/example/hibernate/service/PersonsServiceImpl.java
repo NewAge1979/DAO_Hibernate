@@ -13,16 +13,16 @@ public class PersonsServiceImpl implements PersonsService {
     private final PersonsRepository personsRepository;
     @Override
     public List<Person> getPersonsByCity(String city) {
-        return personsRepository.findPersonByCity(city);
+        return personsRepository.queryPersonByCity(city);
     }
 
     @Override
     public List<Person> getPersonsByAge(Integer age) {
-        return personsRepository.findPersonById_AgeLessThanOrderById_AgeAsc(age);
+        return personsRepository.queryPersonByAge(age);
     }
 
     @Override
     public List<Person> getPersonsByNameAndSurname(String name, String surname) {
-        return personsRepository.findPersonById_NameAndAndId_Surname(name, surname).orElse(null);
+        return personsRepository.queryPersonByNameSurname(name, surname).orElse(null);
     }
 }
