@@ -25,4 +25,9 @@ public class PersonsServiceImpl implements PersonsService {
     public List<Person> getPersonsByNameAndSurname(String name, String surname) {
         return personsRepository.queryPersonByNameSurname(name, surname).orElse(null);
     }
+
+    @Override
+    public List<Person> getPersonsAll() {
+        return personsRepository.findAll();
+    }
 }

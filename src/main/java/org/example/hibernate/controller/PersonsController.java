@@ -30,4 +30,9 @@ public class PersonsController {
     public List<Person> getPersonsByNameAndSurname(@RequestParam String name, @RequestParam String surname) {
         return personsService.getPersonsByNameAndSurname(name, surname);
     }
+
+    @GetMapping("/all")
+    public List<Person> getPersonsAll() {
+        return personsService.getPersonsAll();
+    }
 }
