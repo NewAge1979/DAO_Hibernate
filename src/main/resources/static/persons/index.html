@@ -6,9 +6,17 @@
 </head>
 <body>
     <ol>
-        <li><a href="http://localhost:8888/persons/by-city?city=Moscow" target="_blank">By city (доступно всем)</a></li>
-        <li><a href="http://localhost:8888/persons/by-age?age=50" target="_blank">By age (пользователь: test1, пароль: test1)</a></li>
-        <li><a href="http://localhost:8888/persons/by-name-surname?name=Vasia&surname=Pupkin" target="_blank">By name and surname (пользователь: test2, пароль: test2)</a></li>
+        <li><a href="http://localhost:8888/persons/by-city?city=Moscow" target="_blank">By city (доступно пользователью с ролью: READ)</a></li>
+        <li><a href="http://localhost:8888/persons/by-age?age=50" target="_blank">By age (доступно пользователью с ролью: WRITE)</a></li>
+        <li><a href="http://localhost:8888/persons/by-name-surname?name=Vasia&surname=Pupkin" target="_blank">By name and surname (доступно пользователью с ролью: WRITE или DELETE)</a></li>
+        <li><a href="http://localhost:8888/persons/user?username=test1" target="_blank">By name and surname (доступно пользователью: test1)</a></li>
+    </ol>
+    <hr />
+    <p>Список пользователей:</p>
+    <ol>
+        <li>Пользователь: test1, пароль: test1, роль: READ</li>
+        <li>Пользователь: test2, пароль: test2, роль: WRITE</li>
+        <li>Пользователь: test3, пароль: test3, роль: DELETE</li>
     </ol>
 </body>
 </html>
